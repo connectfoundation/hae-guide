@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -99,10 +100,15 @@
   .section-head { font-size:13px; font-weight:600; color:var(--text2); margin:24px 0 6px; padding-bottom:6px; border-bottom:1px solid var(--border); }
   .section-note { font-size:12px; color:var(--text3); margin-bottom:12px; line-height:1.6; }
   .series-intro { background:var(--bg2); border:0.5px solid var(--border2); border-radius:var(--r); padding:14px 18px; margin-bottom:12px; }
-  .series-desc { font-size:13px; color:var(--text2); line-height:1.7; margin-bottom:12px; }
-  .btn-series { display:inline-block; font-size:13px; font-weight:600; padding:9px 20px; border-radius:var(--r-sm); background:#ff7a2d; color:var(--bg); text-decoration:none; transition:opacity 0.15s; }
+  .series-desc { font-size:14px; color:var(--text2); line-height:1.7; margin-bottom:14px; }
+  /* 버튼 + 신청마감 묶음 */
+  .series-btn-wrap { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .series-deadline { font-size:12px; color:var(--text3); white-space:nowrap; }
+  .series-deadline .dl-left-label { font-weight:600; color:var(--text2); }
+  .series-deadline.closed { color:#c0392b; font-weight:600; }
+  .btn-series { display:inline-block; font-size:13px; font-weight:600; padding:9px 20px; border-radius:var(--r-sm); background:#ff7a2d; color:var(--bg); text-decoration:none; transition:opacity 0.15s; white-space:nowrap; }
   .btn-series:hover { opacity:0.75; }
-  .btn-series2 { display:inline-block; font-size:13px; font-weight:600; padding:9px 20px; border-radius:var(--r-sm); background:var(--text); color:var(--bg); text-decoration:none; transition:opacity 0.15s; }
+  .btn-series2 { display:inline-block; font-size:13px; font-weight:600; padding:9px 20px; border-radius:var(--r-sm); background:var(--text); color:var(--bg); text-decoration:none; transition:opacity 0.15s; white-space:nowrap; }
   .btn-series2:hover { opacity:0.75; }
 
   .format-pill { font-size:11px; font-weight:500; padding:2px 8px; border-radius:999px; white-space:nowrap; }
@@ -490,9 +496,9 @@
 <p class="section-head" data-section="online">시리즈 강의 — 현장 문제 정의부터 해결 방안까지 한 번에 정리하는 AI 솔루션 기획</p>
 <div class="series-intro" data-section="online">
   <p class="series-desc">총 3회 · VOD 수강 후 Live 피드백 · 사전 산출물 제출 필요<br>※ Live 피드백은 강의 없이 본인이 채워온 산출물을 첨석 받는 자리입니다. 사전에 VOD를 수강하고 산출물을 완성한 참가자에 한해 참여할 수 있습니다.<br><br>직접 과제를 제출하고, 온라인 실습을 통해 강사에게 직접 피드백을 받고 싶다면 [3주 집중 피드백 받기]를,<br>매주 진행되는 온라인 실습에서 다른 팀이 피드백 받는 과정을 참고하며 배우고 싶다면 [피드백 세션 참관하기]를 신청해주세요.</p>
-  <div style="display:inline-block;">
+  <div class="series-btn-wrap">
     <a href="https://forms.gle/jxLNa16mqtJdfq1R8" target="_blank" class="btn-series">3주 집중 피드백 받기 →</a>
-    <p class="cs-left-deadline" data-date="2026-06-24"><span class="dl-left-label">신청마감</span> 6/24 (수)</p>
+    <p class="series-deadline" data-date="2026-06-24"><span class="dl-left-label">신청마감</span> 6/24 (수)</p>
   </div>
 </div>
 
@@ -612,12 +618,17 @@
 
   
 <!-- techrun 섹션 헤더 -->
-<p class="section-head" data-section="online">[네이버 커넥트재단]TechRun LIVE</p>
+<p class="section-head" data-section="online">테크런 라이브 — 사진 한 장으로 만드는 AI 이미지 세트</p>
 <div class="series-intro" data-section="online">
-  <p class="series-desc">상품 사진 하나면 상세페이지 + 배너 + 썸네일 + 짧은 영상 완성! 디자인이 고민인 당신을 위해 준비했어요.<br>네이버 커넥트재단에서 AI 무료 특강 "직접 만드는 AI 이미지 세트" TechRun 프로그램 참가자를 모집합니다.<br><br>📖 학습 안내<br>&nbsp;- 일정: 6월 25일 ~ 7월 8일 (2주)<br>&nbsp;- 라이브 특강: 6월 26일 (금) 저녁 7시~9시<br>&nbsp;- 언제 어디서든 부담 없는 온라인 자율 학습<br>&nbsp;&#35;무료, &#35;셀피쉬클럽_젬마, &#35;생성형AI, &#35;이미지세트, &#35;짧은영상까지</p>
-  <div style="display:inline-block;">
-    <a href="https://m.site.naver.com/29Jhc" target="_blank" class="btn-series2">신청 하러 가기 →</a>
-    <p class="cs-left-deadline" data-date="2026-06-24"><span class="dl-left-label">신청마감</span> 6/24 (수) 23시 30분</p>
+  <p class="series-desc">AI 챌린지 해를 운영하는 네이버 커넥트재단에서 무료 라이브 특강을 진행합니다. 상품 사진 한 장으로 상세페이지·배너·썸네일·짧은 영상까지 한 번에 완성할 수 있어요. 디자인이 고민인 분이라면 신청해보세요.</p>
+  <div class="card-points" style="margin-bottom:14px;">
+    <p class="card-point">일시: 6월 26일 (금) 오후 7–9시</p>
+    <p class="card-point">강의자: 젬마 (AX 비즈니스 디렉터, 셀피쉬클럽)</p>
+    <p class="card-point">사용 도구: Claude · Hookable · ChatGPT 이미지 · Canva</p>
+  </div>
+  <div class="series-btn-wrap">
+    <a href="https://naver.me/xQJiKfUf" target="_blank" class="btn-series2">신청하기 →</a>
+    <p class="series-deadline" data-date="2026-06-24"><span class="dl-left-label">신청마감</span> 6/24 (수) 23:30</p>
   </div>
 </div>
 <!-- VOD 섹션 헤더 -->
@@ -785,17 +796,23 @@
   }
 
   const today = new Date(); today.setHours(0,0,0,0);
-  document.querySelectorAll('.cs-deadline[data-date]').forEach(el => {
+  document.querySelectorAll('.cs-deadline[data-date], .series-deadline[data-date]').forEach(el => {
     if (today > new Date(el.dataset.date)) {
-      el.textContent = '신청 마감'; el.classList.add('closed');
-      el.style.display = 'none';
-      // 카드 내 모든 마감일이 지났을 때만 버튼 비활성화
-      const card = el.closest('.card-summary');
-      const deadlines = card.querySelectorAll('.cs-deadline[data-date]');
-      const allClosed = Array.from(deadlines).every(d => today > new Date(d.dataset.date));
-      if (allClosed) {
-        const btn = card.querySelector('.btn-apply');
-        if (btn) { btn.textContent = '마감'; btn.classList.add('disabled'); }
+      el.classList.add('closed');
+      if (el.classList.contains('series-deadline')) {
+        el.innerHTML = '<span class="dl-left-label">신청마감</span>';
+        // 버튼도 비활성화
+        const btn = el.closest('.series-btn-wrap')?.querySelector('a');
+        if (btn) { btn.textContent = '마감'; btn.style.opacity='0.4'; btn.style.pointerEvents='none'; }
+      } else {
+        el.textContent = '신청 마감'; el.style.display = 'none';
+        const card = el.closest('.card-summary');
+        const deadlines = card.querySelectorAll('.cs-deadline[data-date]');
+        const allClosed = Array.from(deadlines).every(d => today > new Date(d.dataset.date));
+        if (allClosed) {
+          const btn = card.querySelector('.btn-apply');
+          if (btn) { btn.textContent = '마감'; btn.classList.add('disabled'); }
+        }
       }
     }
   });
