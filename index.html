@@ -97,9 +97,18 @@
   .section-head { font-size:13px; font-weight:600; color:var(--text2); margin:24px 0 6px; padding-bottom:6px; border-bottom:1px solid var(--border); }
   .section-note { font-size:12px; color:var(--text3); margin-bottom:12px; line-height:1.6; }
   .series-intro { background:var(--bg2); border:0.5px solid var(--border2); border-radius:var(--r); padding:14px 18px; margin-bottom:12px; }
-  .series-desc { font-size:13px; color:var(--text2); line-height:1.7; margin-bottom:12px; }
-  .btn-series { display:inline-block; font-size:13px; font-weight:600; padding:9px 20px; border-radius:var(--r-sm); background:var(--text); color:var(--bg); text-decoration:none; transition:opacity 0.15s; }
+
+   /* 버튼 + 신청마감 묶음 */
+  .series-btn-wrap { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .series-deadline { font-size:12px; color:var(--text3); white-space:nowrap; }
+  .series-deadline .dl-left-label { font-weight:600; color:var(--text2); }
+  .series-deadline.closed { color:#c0392b; font-weight:600; }
+  .btn-series { display:inline-block; font-size:13px; font-weight:600; padding:9px 20px; border-radius:var(--r-sm); background:#ff7a2d; color:var(--bg); text-decoration:none; transition:opacity 0.15s; white-space:nowrap; }
   .btn-series:hover { opacity:0.75; }
+  .btn-series2 { display:inline-block; font-size:13px; font-weight:600; padding:9px 20px; border-radius:var(--r-sm); background:var(--text); color:var(--bg); text-decoration:none; transition:opacity 0.15s; white-space:nowrap; }
+  .btn-series2:hover { opacity:0.75; }
+  .series-desc { font-size:13px; color:var(--text2); line-height:1.7; margin-bottom:12px; }
+
 
   .format-pill { font-size:11px; font-weight:500; padding:2px 8px; border-radius:999px; white-space:nowrap; }
   .fp-online  { background:var(--online-bg);  color:var(--online-text); }
@@ -508,6 +517,22 @@
   </div>
 </div>
 
+  
+<!-- techrun 섹션 헤더 -->
+<p class="section-head" data-section="online">테크런 라이브 — 사진 한 장으로 만드는 AI 이미지 세트</p>
+<div class="series-intro" data-section="online">
+  <p class="series-desc">AI 챌린지 해를 운영하는 네이버 커넥트재단에서 무료 라이브 특강을 진행합니다. 상품 사진 한 장으로 상세페이지·배너·썸네일·짧은 영상까지 한 번에 완성할 수 있어요. 디자인이 고민인 분이라면 신청해보세요.</p>
+  <div class="card-points" style="margin-bottom:14px;">
+    <p class="card-point">일시: 6월 26일 (금) 오후 7–9시</p>
+    <p class="card-point">강의자: 젬마 (AX 비즈니스 디렉터, 셀피쉬클럽)</p>
+    <p class="card-point">사용 도구: Claude · Hookable · ChatGPT 이미지 · Canva</p>
+  </div>
+  <div class="series-btn-wrap">
+    <a href="https://naver.me/xQJiKfUf" target="_blank" class="btn-series2">신청하기 →</a>
+    <p class="series-deadline" data-date="2026-06-24"><span class="dl-left-label">신청마감</span> 6/24 (수) 23:30</p>
+  </div>
+</div>
+ 
 <!-- VOD 섹션 헤더 -->
 <p class="section-head" data-section="vod">VOD 강의</p>
 
