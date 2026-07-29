@@ -1054,6 +1054,8 @@ function renderDetail(en) {
   const eProtoRef = escapeHtml(en.protoRef);
   const eAiTools  = escapeHtml(en.aiTools);
   const protoHref = safeUrl(en.proto);
+  const protoHrefOri = en.proto;
+ 
   const orgCheckHtml = en.orgCheck
     ? en.orgCheck.split(',').map(s => s.trim()).filter(Boolean).map(s => {
         const text = escapeHtml(s.endsWith('.') ? s : s + '.');
@@ -1108,8 +1110,8 @@ function renderDetail(en) {
       ${en.proto ? `<div class="qa-block">
         <div class="qa-label">프로토타입 링크</div>
         <div class="qa-text"><a href="${protoHref}" target="_blank" rel="noopener" style="color:var(--grade-b);">열기 ↗</a></div>
-        <div>위의 링크가 열리지 않는 경우, 아래 text에서 URL을 확인후, 다른 브라우져에서 열어주시기 바랍니다.</div>
-        <div class="qa-text">${protoHref}</div>
+        <div style="font-size:10px">위의 링크가 열리지 않는 경우, 아래 text에서 URL을 확인후, 다른 브라우져에서 열어주시기 바랍니다.</div>
+        <div class="qa-text">${protoHrefOri}</div>
       </div>` : ''}
       <div class="qa-block">
         <div class="qa-label">프로토타입 설명</div>
