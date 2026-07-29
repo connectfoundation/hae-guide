@@ -803,7 +803,7 @@ function rowToEntry(row, i) {
   return {
     id:            (row['팀 대표자 이메일 주소'] || ('e' + i)).replace(/[^a-zA-Z0-9@._-]/g, '_'),
     rep:           row['팀 대표자 이름']                                                          || '',
-//    email:         row['팀 대표자 이메일 주소']                                                   || '',
+    email:         row['팀 대표자 이메일 주소']                                                   || '',
     orgIntro:      row['재직 기관 소개 (300자 내외)']                                             || '',
     teamIntro:     row['팀원 구성 소개 (500자 이내)']                                             || '',
     orgCheck:      row['현재 재직중인 기관에 해당하는 사항을 모두 선택해주세요.']                  || '',
@@ -1066,7 +1066,7 @@ function renderDetail(en) {
       <div class="submission-header">
         <div class="submission-org">${eRep}</div>
         <div class="submission-meta">
-          <span>${eEmail}</span>
+          <span style="display:none;">${eEmail}</span>
           ${en.proto ? `<a href="${protoHref}" target="_blank" rel="noopener" style="color:var(--grade-b);font-size:12px;text-decoration:none;cursor:pointer;">프로토타입 보기 ↗</a>` : ''}
         </div>
       </div>
