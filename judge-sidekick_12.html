@@ -1057,9 +1057,9 @@ function renderDetail(en) {
   const protoHrefOri = en.proto;
  
   const orgCheckHtml = en.orgCheck
-    ? en.orgCheck.split('다.,').map(s => s.trim()).filter(Boolean).map(s => {
-        const text = escapeHtml(s.endsWith('.') ? s : s + '.');
-        return `<div style="display:flex;align-items:flex-start;gap:6px;margin-bottom:4px;"><span style="color:var(--grade-a);font-weight:600;flex-shrink:0;">✓</span><span>${text}다.</span></div>`;
+    ? en.orgCheck.split('.,').map(s => s.trim()).filter(Boolean).map(s => {
+        const text = escapeHtml(s.endsWith('.') ? s : s + '');
+        return `<div style="display:flex;align-items:flex-start;gap:6px;margin-bottom:4px;"><span style="color:var(--grade-a);font-weight:600;flex-shrink:0;">✓</span><span>${text}.</span></div>`;
       }).join('')
     : '—';
 
